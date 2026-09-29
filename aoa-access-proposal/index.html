@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AOA Access 2.0 — Launch Partnership Proposal · Zimetrics</title>
+<meta name="description" content="Branding, HubSpot email, login and Help Center design for the launch of AOA Access 2.0.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // Skip the sign-in gate for returning viewers, or when opened with ?gate=0.
+  (function () {
+    var skip = /[?&]gate=0\b/.test(location.search);
+    try { skip = skip || localStorage.getItem('aoa-prop-entered') === '1'; } catch (e) {}
+    if (skip) document.documentElement.setAttribute('data-entered', '');
+  })();
+</script>
+<style>html[data-entered] .gate { display: none; }</style>
+</head>
+<body>
+
+<!-- Sign-in gate: doubles as a sample of the login design -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-brand">
+    <div class="gate-logo"><b>AOA</b><i></i><span>Access 2.0</span></div>
+    <div>
+      <div class="gate-eyebrow">Launch Partnership Proposal</div>
+      <h1>An identity strong enough to move 70% of a business.</h1>
+      <p>Branding, HubSpot email, login and Help Center design for the launch of AOA Access 2.0 — presented the way your users will meet it.</p>
+    </div>
+    <div class="gate-meta"><span>Prepared for AOA · Ormco</span><span>By Zimetrics</span><span>October 2026</span></div>
+  </div>
+  <div class="gate-side">
+    <div class="gate-card">
+      <div class="wordmark">AOA</div>
+      <h2 id="gate-title">Sign in to view your proposal</h2>
+      <p>This page is a working sample of the login experience we'd design for AOA Access 2.0.</p>
+      <label>Email</label>
+      <div class="gate-field">team@aoaaccess.com</div>
+      <label>Access code</label>
+      <div class="gate-field is-focus">AOA-2026</div>
+      <button type="button" id="enter">View proposal</button>
+      <div class="gate-note"><i class="ph ph-arrows-clockwise"></i><span>Moving from the previous portal? Your orders, templates and TSIs come with you.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-head"><span class="wordmark">AOA</span><small>Proposal</small></div>
+    <nav id="nav" aria-label="Proposal sections"></nav>
+    <div class="sidebar-foot">Prepared by <b>Zimetrics</b><br>biz@zimetrics.com</div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <h1 id="active-label">Overview</h1>
+      <div class="spacer"></div>
+      <div class="org-chip"><i class="ph ph-buildings"></i>AOA · Ormco · Envista</div>
+      <a class="reply-btn" href="mailto:biz@zimetrics.com?subject=AOA%20Access%202.0%20proposal"><i class="ph ph-paper-plane-tilt"></i>Reply to proposal</a>
+    </header>
+
+    <div class="content">
+
+      <!-- Overview -->
+      <section id="overview" class="section">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Proposal · AOA Access 2.0</div>
+            <h2>An identity strong enough to move 70% of a business.</h2>
+            <p>AOA Access 2.0 isn't a feature update — it's a request for every office and rep to change how they've always worked. That only happens if the portal earns trust before it earns a login.</p>
+          </div>
+          <div class="hero-stat">
+            <b>70%</b>
+            <p>of incoming units, migrated — the number this entire program is built around.</p>
+          </div>
+        </div>
+        <div class="grid kpis" id="kpis"></div>
+        <div class="card objective">
+          <div>
+            <div class="label-caps">Objective</div>
+            <p>Zimetrics to support AOA in launching its new customer portal with a cohesive brand identity, an intuitive login and help experience, and a well-orchestrated launch communication program.</p>
+          </div>
+          <div>
+            <div class="label-caps">Beyond the brief, we recommend</div>
+            <ul class="checklist">
+              <li><i class="ph ph-check-circle"></i>Locking the launch date early</li>
+              <li><i class="ph ph-check-circle"></i>Segmenting messages for new versus migrating users</li>
+              <li><i class="ph ph-check-circle"></i>Designing to accessibility standards</li>
+              <li><i class="ph ph-check-circle"></i>Tracking success metrics after launch</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Today's portal -->
+      <section id="portal" class="section">
+        <div>
+          <div class="kicker">What we're launching</div>
+          <h2 class="section-title">AOA Access 2.0, as it stands today</h2>
+          <p class="section-lede">The product is built. Our work is the layer around it: the identity it carries, the first screen people see, the messages that bring them in and the help that keeps them there.</p>
+        </div>
+        <div class="grid shots" id="shots"></div>
+      </section>
+
+      <!-- Scope -->
+      <section id="scope" class="section">
+        <div>
+          <div class="kicker">Scope of work</div>
+          <h2 class="section-title">Ten deliverables across four workstreams</h2>
+          <p class="section-lede">Your requirements, tracked the way AOA Access tracks orders. Select a workstream to filter.</p>
+        </div>
+        <div class="scope-cards" id="scope-cards"></div>
+        <div class="card table-wrap">
+          <div class="scope-table">
+            <div class="scope-row is-head"><span>ID</span><span>Deliverable</span><span>Workstream</span><span>Format</span></div>
+            <div id="scope-rows"></div>
+            <div class="table-foot" id="scope-count"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Identity -->
+      <section id="identity" class="section">
+        <div>
+          <div class="kicker">Graphic design / Branding</div>
+          <h2 class="section-title">A portal identity that belongs to the Ormco family</h2>
+          <p class="section-lede">Concept development and revision rounds, refined to one final mark, then packaged for every surface it will appear on and documented in a PDF brand guide.</p>
+        </div>
+        <div class="grid lockups">
+          <div class="lockup"><span>Full color</span><div class="lockup-mark"><b>AOA</b><span>Access</span></div><span>Placeholder wordmark</span></div>
+          <div class="lockup is-mono"><span>Single color</span><div class="lockup-mark"><b>AOA</b><span>Access</span></div><span>Placeholder wordmark</span></div>
+          <div class="lockup is-reversed"><span>Reversed</span><div class="lockup-mark"><b>AOA</b><span>Access</span></div><span>Placeholder wordmark</span></div>
+        </div>
+        <div class="grid two-up">
+          <div class="card pad-22">
+            <div class="card-title">Final logo package</div>
+            <div class="format-grid" id="format-grid">
+              <span></span><b>AI</b><b>EPS</b><b>SVG</b><b>PNG</b><b>JPG</b>
+            </div>
+            <p class="card-note">15 files per lockup, vector and raster.</p>
+          </div>
+          <div class="card pad-22">
+            <div class="card-title">Portal product brand guide (PDF)</div>
+            <div class="guide-grid">
+              <div><i class="ph ph-seal"></i>Logo usage</div>
+              <div><i class="ph ph-palette"></i>Color palette</div>
+              <div><i class="ph ph-text-aa"></i>Typography</div>
+              <div><i class="ph ph-layout"></i>Application standards</div>
+            </div>
+            <p class="card-note">Clear standards for internal and partner teams to apply the brand going forward.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Launch arc -->
+      <section id="arc" class="section">
+        <div>
+          <div class="kicker">Launch campaign strategy</div>
+          <h2 class="section-title">From first awareness to full adoption</h2>
+        </div>
+        <div class="card arc">
+          <div class="arc-bands"><div>Pre-launch</div><div>Go-live</div><div>Post-launch</div></div>
+          <div class="phases" id="phases"></div>
+        </div>
+      </section>
+
+      <!-- Email sequence -->
+      <section id="email" class="section">
+        <div>
+          <div class="kicker">Email marketing · HubSpot</div>
+          <h2 class="section-title">Ten sends, three templates, one launch date</h2>
+          <p class="section-lede">A proposed drip sequence mapped against go-live (Day 0). Select a send to see its role. Final timing and copy are set in the strategy phase.</p>
+        </div>
+        <div class="card sequence">
+          <div class="timeline"><div class="timeline-steps" id="sends"></div></div>
+          <div class="send-detail">
+            <div class="send-summary">
+              <small id="send-meta"></small>
+              <b id="send-subject"></b>
+              <p id="send-role"></p>
+            </div>
+            <div class="send-facts">
+              <div><small>Audience</small><span id="send-aud"></span></div>
+              <div><small>Template</small><span id="send-tpl"></span></div>
+              <div><small>Phase</small><span id="send-phase"></span></div>
+              <div><small>Built in</small><span>HubSpot</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid templates" id="templates"></div>
+      </section>
+
+      <!-- Login states -->
+      <section id="login" class="section">
+        <div>
+          <div class="kicker">UI/UX · Login screen</div>
+          <h2 class="section-title">Every state of the front door, designed</h2>
+          <p class="section-lede">Delivered as a Figma file with handoff specifications. Switch states to see what each one has to handle.</p>
+        </div>
+        <div class="segmented" id="login-tabs" role="group" aria-label="Login screen state"></div>
+        <div class="login-stage">
+          <div class="login-card">
+            <div class="wordmark">AOA</div>
+
+            <div data-state="signin">
+              <div class="lc-title">Welcome to AOA Access</div>
+              <div class="lc-sub">Sign in to manage orders and Rx.</div>
+              <div class="lc-label">Email</div>
+              <div class="lc-field is-placeholder">name@practice.com</div>
+              <div class="lc-label">Password</div>
+              <div class="lc-field is-placeholder has-icon">••••••••<i class="ph ph-eye"></i></div>
+              <div class="lc-link" style="text-align:right;margin:10px 0 16px">Forgot password?</div>
+              <div class="btn-primary lc-btn">Sign in</div>
+              <div class="lc-foot">New to AOA Access? <span class="lc-link">Set up your account</span></div>
+            </div>
+
+            <div data-state="error" hidden>
+              <div class="lc-title">Welcome to AOA Access</div>
+              <div class="lc-sub">Sign in to manage orders and Rx.</div>
+              <div class="lc-label">Email</div>
+              <div class="lc-field">a.nair@practice.com</div>
+              <div class="lc-label">Password</div>
+              <div class="lc-field is-error">••••••</div>
+              <div class="lc-error"><i class="ph ph-warning-circle"></i>That password doesn't match this email. Two attempts left before a short lock.</div>
+              <div class="btn-primary lc-btn">Try again</div>
+              <div class="lc-foot is-link">Reset password instead</div>
+            </div>
+
+            <div data-state="recovery" hidden>
+              <div class="lc-key"><i class="ph ph-key"></i></div>
+              <div class="lc-title">Reset your password</div>
+              <div class="lc-sub">We'll email a secure link. It expires in 30 minutes.</div>
+              <div class="lc-label">Email</div>
+              <div class="lc-field" style="margin-bottom:18px">a.nair@practice.com</div>
+              <div class="btn-primary lc-btn">Send reset link</div>
+              <div class="lc-foot is-link"><i class="ph ph-arrow-left"></i>Back to sign in</div>
+            </div>
+
+            <div data-state="first" hidden>
+              <div class="lc-title">Set up your account</div>
+              <div class="lc-sub">Three steps and you're ready to place orders.</div>
+              <div class="lc-steps">
+                <div class="lc-step is-done"><i class="ph ph-check-circle"></i>Verify your email</div>
+                <div class="lc-step is-current"><span class="lc-step-num">2</span>Create a password</div>
+                <div class="lc-step is-next"><span class="lc-step-num">3</span>Confirm your practice</div>
+              </div>
+              <div class="btn-primary lc-btn" style="margin-top:18px">Continue</div>
+            </div>
+
+            <div data-state="migrating" hidden>
+              <div class="lc-banner"><i class="ph ph-arrows-clockwise"></i>You're moving from the previous AOA portal.</div>
+              <div class="lc-title">Welcome to AOA Access 2.0</div>
+              <div class="lc-sub" style="margin-bottom:16px">Your orders, templates and TSIs are already here. Sign in with your existing credentials.</div>
+              <div class="lc-carried">
+                <div><i class="ph ph-check"></i>20 orders carried over</div>
+                <div><i class="ph ph-check"></i>3 TSIs and user templates</div>
+              </div>
+              <div class="btn-primary lc-btn">Continue with existing login</div>
+              <div class="lc-foot is-link">Take the 90-second tour</div>
+            </div>
+          </div>
+          <div class="login-note" aria-live="polite">
+            <div class="label-caps" id="ls-kicker"></div>
+            <h3 id="ls-title"></h3>
+            <p id="ls-body"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Help Center -->
+      <section id="help" class="section">
+        <div>
+          <div class="kicker">UI/UX · Portal landing &amp; Help Center</div>
+          <h2 class="section-title">A home base that answers before anyone calls</h2>
+          <p class="section-lede">Landing page design in Figma with handoff specs, plus How-To guides, FAQs and instructional resources in written and video formats, organised around the portal's own sections.</p>
+        </div>
+        <div class="card help">
+          <div class="help-hero">
+            <div>How can we help?</div>
+            <div class="help-search"><i class="ph ph-magnifying-glass"></i>Search guides, e.g. "create an Rx for MDA"</div>
+          </div>
+          <div class="help-cats" id="help-cats"></div>
+        </div>
+        <div class="videos" id="videos"></div>
+      </section>
+
+      <!-- Team -->
+      <section id="team" class="section">
+        <div>
+          <div class="kicker">Team &amp; proof</div>
+          <h2 class="section-title">An embedded pod, not a rotating account team</h2>
+        </div>
+        <div class="grid proof" id="proof"></div>
+        <div class="grid team" id="team-grid"></div>
+      </section>
+
+      <!-- Investment -->
+      <section id="investment" class="section">
+        <div>
+          <div class="kicker">Pricing &amp; commercials</div>
+          <h2 class="section-title">Two ways to structure the engagement</h2>
+          <p class="section-lede">Rates are illustrative starting points, confirmed against final scope and launch timeline before signing.</p>
+        </div>
+        <div class="segmented" id="model-tabs" role="group" aria-label="Pricing model"></div>
+        <div class="grid tiers" data-model="A" id="tiers"></div>
+        <div class="card pod" data-model="B" hidden>
+          <div class="pod-intro">Time &amp; material, invoiced monthly for the deployed team. Scale allocation up during launch, down after.</div>
+          <div class="pod-row is-head"><span>Role</span><span>Allocation</span><span>Monthly (USD)</span></div>
+          <div id="pod-rows"></div>
+          <div class="pod-total"><span>Total monthly</span><span id="pod-total"></span></div>
+        </div>
+      </section>
+
+      <!-- Next steps -->
+      <section id="next" class="section">
+        <div class="next-card">
+          <div>
+            <div class="eyebrow">Next steps</div>
+            <h2>To start this week</h2>
+            <a class="kickoff" href="mailto:biz@zimetrics.com?subject=AOA%20Access%202.0%20%E2%80%94%20let's%20kick%20off">Schedule kickoff<i class="ph ph-arrow-right"></i></a>
+            <div class="next-contact">Zimetrics · biz@zimetrics.com · www.zimetrics.com<br>#MakeImpactHappen</div>
+          </div>
+          <div class="steps" id="steps"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
